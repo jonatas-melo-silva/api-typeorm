@@ -1,0 +1,43 @@
+{
+  "name": "api-typeorm",
+  "version": "0.0.1",
+  "description": "API com TYPEORM.",
+  "main": "server.ts",
+  "directories": {
+    "test": "__test__"
+  },
+  "devDependencies": {
+    "@sucrase/jest-plugin": "^2.1.0",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^26.0.24",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^8.0.29",
+    "@types/uuid": "^8.3.1",
+    "jest": "^25.3.0",
+    "TypeORM": "^2.0.12",
+    "sucrase": "^3.20.0",
+    "supertest": "^6.1.4",
+    "ts-node": "3.3.0",
+    "typescript": "3.3.3333"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.4.0",
+    "reflect-metadata": "^0.1.10",
+    "typeorm": "0.2.36",
+    "uuid": "^3.4.0"
+  },
+  "scripts": {
+    "jest": "jest",
+    "dev:server": "nodemon --exec ts-node src/server.ts --ignore __tests__",
+    "start": "ts-node src/server.ts"
+  },
+  "jest": {
+    "transform": {
+      ".(js|jsx|ts|tsx)": "@sucrase/jest-plugin"
+    }
+  }
+}
